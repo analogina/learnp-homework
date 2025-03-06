@@ -21,33 +21,23 @@ def main():
   try:
     user_age = int(user_input)
   except ValueError:
-    #print('Вы ввели не число.')
     result = 'Вы ввели не число.'
+    
   else:
     if user_age <= 6:
-        #user_class = str('Учится в детском саду.')
-        #print('Пользователь учится в детском саду.')
         result = 'Пользователь учится в детском саду.'
+
     elif 18 >= user_age:
-        #user_class = str('Учится в школе.')
-        #print('Пользователь учится в школе.')
         result = 'Пользователь учится в школе.'
+
     elif 21 >= user_age:
-        #print('Пользователь учится в ВУЗе.')
         result = 'Пользователь учится в ВУЗе.'
+
     else:
-        #print('Пользователь работает')
         result = 'Пользователь работает'
   print(f"result is = {result}")
   return result
 
-#print(f'Пользователь {result}')
-
-    # """
-    # Эта функция вызывается автоматически при запуске скрипта в консоли
-    # В ней надо заменить pass на ваш код
-    # """
-    #pass
 
 if __name__ == "__main__":
   res = main()
