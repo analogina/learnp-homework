@@ -1,3 +1,4 @@
+#!/bin/python3
 """
 
 Домашнее задание №1
@@ -15,11 +16,30 @@
 """
 
 def main():
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    pass
+  user_input = input('Сколько тебе лет: ')
+
+  try:
+    user_age = int(user_input)
+  except ValueError:
+    result = 'Вы ввели не число.'
+    
+  else:
+    if user_age <= 6:
+        result = 'Пользователь учится в детском саду.'
+
+    elif 18 >= user_age:
+        result = 'Пользователь учится в школе.'
+
+    elif 21 >= user_age:
+        result = 'Пользователь учится в ВУЗе.'
+
+    else:
+        result = 'Пользователь работает'
+  print(f"result is = {result}")
+  return result
+
 
 if __name__ == "__main__":
-    main()
+  res = main()
+  print(f"Main result is: {res}")
+
